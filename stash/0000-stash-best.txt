@@ -1,0 +1,2284 @@
+Seed:        1438292314
+Generations: 100
+Population:  100
+
+The first generation is a single, pre-made character.
+The only things that change are the different movesets.
+The character chooses which move to use next based off which moveset statements are both true and most specific.
+If multiple moveset statements are equally specific, the higher one is used.
+Fallbacks (statements that are simply "true") have no value.
+Nothing in the battles are random, the only random factor is the mutations to each character (other than the first).
+These are the best characters in each generation.
+
+-- PASSED ON (only the ones that were BETTER than the previous get passed on) --
+
+Generation 0
+-----------------
+  0:0                   | ~PASSED ON
+ (  0/100 HP, 50/50 MP) | Character
+ (203/250 HP, 46/73 MP) | Bosses
+  Complexity: 3
+  Move Sets:
+    if ((true))
+      Normal Attack
+
+-----------------
+
+Generation 1
+-----------------
+  1:30                  | ~PASSED ON
+ (  0/100 HP, 32/50 MP) | Character
+ (105/250 HP, 39/73 MP) | Bosses
+  Complexity: 6
+  Move Sets:
+    if ((true))
+      Normal Attack
+    if ((magic >= 68%))
+      Battle Cry
+
+-----------------
+
+Generation 2
+-----------------
+  2:67                 | ~PASSED ON
+ ( 6/100 HP,  0/50 MP) | Character
+ (35/250 HP, 13/73 MP) | Bosses
+  Complexity: 7
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 68%))
+      Battle Cry
+
+-----------------
+
+Generation 4
+-----------------
+  4:43                 | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (17/250 HP, 17/73 MP) | Bosses
+  Complexity: 8
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 5
+-----------------
+  5:2                  | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 80%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 11
+-----------------
+  11:33                | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 17
+-----------------
+  17:70                | ~PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 34
+-----------------
+  34:71                | ~PASSED ON
+ (15/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 22
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+    if ((health <= 40% AND health <= 17%))
+      Healer Gaurdian
+    if ((magic <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 36
+-----------------
+  36:64                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 26
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+    if ((health <= 40% AND magic <= 17% OR enemy.health <= 17%))
+      Healer Gaurdian
+    if ((magic <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 37
+-----------------
+  37:76                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 19
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+    if ((enemy.health <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 38
+-----------------
+  38:41                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+----------------------------------------------------------------------------------
+-- ALL --
+
+Generation 0
+-----------------
+  0:0                   | ~PASSED ON
+ (  0/100 HP, 50/50 MP) | Character
+ (203/250 HP, 46/73 MP) | Bosses
+  Complexity: 3
+  Move Sets:
+    if ((true))
+      Normal Attack
+
+-----------------
+
+Generation 1
+-----------------
+  1:30                  | ~PASSED ON
+ (  0/100 HP, 32/50 MP) | Character
+ (105/250 HP, 39/73 MP) | Bosses
+  Complexity: 6
+  Move Sets:
+    if ((true))
+      Normal Attack
+    if ((magic >= 68%))
+      Battle Cry
+
+-----------------
+
+Generation 2
+-----------------
+  2:67                 | ~PASSED ON
+ ( 6/100 HP,  0/50 MP) | Character
+ (35/250 HP, 13/73 MP) | Bosses
+  Complexity: 7
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 68%))
+      Battle Cry
+
+-----------------
+
+Generation 3
+-----------------
+  3:1                  | ~NOT PASSED ON
+ ( 6/100 HP,  0/50 MP) | Character
+ (35/250 HP, 13/73 MP) | Bosses
+  Complexity: 7
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 68%))
+      Battle Cry
+
+-----------------
+
+Generation 4
+-----------------
+  4:43                 | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (17/250 HP, 17/73 MP) | Bosses
+  Complexity: 8
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 5
+-----------------
+  5:2                  | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 80%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 6
+-----------------
+  6:22                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 80%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 7
+-----------------
+  7:22                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 57%))
+      Battle Cry
+    if ((health >= 80%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 8
+-----------------
+  8:15                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 52%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 9
+-----------------
+  9:33                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 71%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 10
+-----------------
+  10:0                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+    if ((health >= 94%))
+      Healer Gaurdian
+
+-----------------
+
+Generation 11
+-----------------
+  11:33                | ~PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 12
+-----------------
+  12:12                | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 13
+-----------------
+  13:5                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 59%))
+      Battle Cry
+
+-----------------
+
+Generation 14
+-----------------
+  14:3                 | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 64%))
+      Battle Cry
+
+-----------------
+
+Generation 15
+-----------------
+  15:77                | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 11
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 58% OR enemy.magic <= 51%))
+      Battle Cry
+
+-----------------
+
+Generation 16
+-----------------
+  16:59                | ~NOT PASSED ON
+ ( 7/100 HP,  2/50 MP) | Character
+ (10/250 HP, 17/73 MP) | Bosses
+  Complexity: 9
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 58%))
+      Battle Cry
+
+-----------------
+
+Generation 17
+-----------------
+  17:70                | ~PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 18
+-----------------
+  18:8                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 19
+-----------------
+  19:73                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 20
+-----------------
+  20:7                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 21
+-----------------
+  21:7                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 74%))
+      Battle Cry
+    if ((health >= 35%))
+      Hack
+
+-----------------
+
+Generation 22
+-----------------
+  22:3                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 54%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 23
+-----------------
+  23:46                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 57%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 24
+-----------------
+  24:18                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 25
+-----------------
+  25:0                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 32%))
+      Hack
+
+-----------------
+
+Generation 26
+-----------------
+  26:24                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 27
+-----------------
+  27:12                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 28
+-----------------
+  28:4                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.health >= 18%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 29
+-----------------
+  29:58                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 43%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 30
+-----------------
+  30:26                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 41%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 31
+-----------------
+  31:44                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 32
+-----------------
+  32:2                 | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 33
+-----------------
+  33:22                | ~NOT PASSED ON
+ (12/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 14
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 44%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+
+-----------------
+
+Generation 34
+-----------------
+  34:71                | ~PASSED ON
+ (15/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 22
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+    if ((health <= 40% AND health <= 17%))
+      Healer Gaurdian
+    if ((magic <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 35
+-----------------
+  35:1                 | ~NOT PASSED ON
+ (15/100 HP,  0/50 MP) | Character
+ ( 7/250 HP, 25/73 MP) | Bosses
+  Complexity: 22
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Hack
+    if ((health <= 40% AND health <= 17%))
+      Healer Gaurdian
+    if ((magic <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 36
+-----------------
+  36:64                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 26
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+    if ((health <= 40% AND magic <= 17% OR enemy.health <= 17%))
+      Healer Gaurdian
+    if ((magic <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 37
+-----------------
+  37:76                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 19
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+    if ((enemy.health <= 30%))
+      Normal Attack
+
+-----------------
+
+Generation 38
+-----------------
+  38:41                | ~PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 39
+-----------------
+  39:1                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 40
+-----------------
+  40:68                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 41
+-----------------
+  41:65                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 58%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 42
+-----------------
+  42:15                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 43
+-----------------
+  43:6                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 67% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 44
+-----------------
+  44:58                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 45
+-----------------
+  45:2                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 46
+-----------------
+  46:38                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 47
+-----------------
+  47:11                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.health >= 11%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 48
+-----------------
+  48:34                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.health >= 48%))
+      Battle Cry
+    if ((health >= 27%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 49
+-----------------
+  49:2                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 19
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 77% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43% OR enemy.health >= 8%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 50
+-----------------
+  50:60                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 17%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 51
+-----------------
+  51:15                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 52
+-----------------
+  52:11                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 53
+-----------------
+  53:26                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 54
+-----------------
+  54:5                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 55
+-----------------
+  55:10                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 56
+-----------------
+  56:3                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 12%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 57
+-----------------
+  57:6                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 58
+-----------------
+  58:39                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 59
+-----------------
+  59:0                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 12%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 60
+-----------------
+  60:20                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((enemy.magic >= 76% AND magic >= 74%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 61
+-----------------
+  61:26                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic <= 100% AND magic >= 72%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 62
+-----------------
+  62:21                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 63
+-----------------
+  63:38                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 64
+-----------------
+  64:4                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 65
+-----------------
+  65:16                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 66
+-----------------
+  66:2                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 45%))
+      Battle Cry
+    if ((health >= 26%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 67
+-----------------
+  67:3                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 68
+-----------------
+  68:5                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 77%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 69
+-----------------
+  69:20                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 37%))
+      Battle Cry
+    if ((health >= 23%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 70
+-----------------
+  70:11                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 71
+-----------------
+  71:23                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 72%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 72
+-----------------
+  72:40                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 70% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 41%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 73
+-----------------
+  73:23                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 74
+-----------------
+  74:5                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 27%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 75
+-----------------
+  75:24                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 76
+-----------------
+  76:3                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 77
+-----------------
+  77:30                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 63%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 78
+-----------------
+  78:27                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 79
+-----------------
+  79:31                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 80
+-----------------
+  80:18                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 33%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 81
+-----------------
+  81:14                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 56%))
+      Battle Cry
+    if ((health >= 44%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 82
+-----------------
+  82:48                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((health >= 22%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 83
+-----------------
+  83:27                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 84
+-----------------
+  84:8                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND health >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 85
+-----------------
+  85:31                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 71%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 86
+-----------------
+  86:17                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 87
+-----------------
+  87:26                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 88
+-----------------
+  88:9                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 27%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 89
+-----------------
+  89:2                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 90
+-----------------
+  90:1                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 17%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 91
+-----------------
+  91:9                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 92
+-----------------
+  92:5                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.magic >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 93
+-----------------
+  93:0                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND enemy.magic >= 48%))
+      Battle Cry
+    if ((magic >= 13%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 94
+-----------------
+  94:23                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 95
+-----------------
+  95:30                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((enemy.health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 96
+-----------------
+  96:21                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 63%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 97
+-----------------
+  97:8                 | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 98
+-----------------
+  98:61                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 22%))
+      Battle Cry
+    if ((health <= 81%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
+Generation 99
+-----------------
+  99:35                | ~NOT PASSED ON
+ (13/100 HP,  0/50 MP) | Character
+ ( 4/250 HP, 23/73 MP) | Bosses
+  Complexity: 17
+  Move Sets:
+    if ((true))
+      Healer Gaurdian
+      Healer Gaurdian
+      Heal
+      Healer Gaurdian
+      Normal Attack
+    if ((magic >= 76% AND magic >= 48%))
+      Battle Cry
+    if ((health >= 43%))
+      Healer Gaurdian
+      Hack
+      Hack
+
+-----------------
+
