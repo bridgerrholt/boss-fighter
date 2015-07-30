@@ -1,4 +1,4 @@
-#include "..\main.h"
+#include "main.h"
 
 HealPerTurn::HealPerTurn(float power, int unique, int turns_total, string name) : Buff()
 {
@@ -10,7 +10,7 @@ HealPerTurn::HealPerTurn(float power, int unique, int turns_total, string name) 
 	dead_ = false;
 
 	name_ = name;
-	sentence_ = "was healed for " + to_string(int(round(power_))) + " by " + name + "!";
+	sentence_ = "was healed for " + toStringRec(int(round(power_))) + " by " + name + "!";
 }
 
 bool HealPerTurn::Update(Character& self)  // returns if still alive

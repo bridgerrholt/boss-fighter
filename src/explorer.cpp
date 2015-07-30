@@ -192,9 +192,9 @@ void Explorer::ListGenerations(Game &game, vector<string> input)
 void Explorer::Stash(Game& game)
 {
 	string description = "";
-	description += "Seed:        " + to_string(game.seed) + "\n";
-	description += "Generations: " + to_string(game.generation_amount) + "\n";
-	description += "Population:  " + to_string(game.character_amount) + "\n\n";
+	description += "Seed:        " + toStringRec(game.seed) + "\n";
+	description += "Generations: " + toStringRec(game.generation_amount) + "\n";
+	description += "Population:  " + toStringRec(game.character_amount) + "\n\n";
 	description += "The first generation is a single, pre-made character.\n";
 	description += "The only things that change are the different movesets.\n";
 	description += "The character chooses which move to use next based off which moveset statements are both true and most specific.\n";
@@ -205,12 +205,12 @@ void Explorer::Stash(Game& game)
 	string dir = "stash/";
 	string suffix = "-stash-all.txt";
 	int prefix = 0;
-	string prefix_str = FillTextWith(to_string(prefix), 4, '0');
+	string prefix_str = FillTextWith(toStringRec(prefix), 4, '0');
 	string file_name = dir + prefix_str + suffix;
 
 	while (CheckFileExists(file_name)) {
 		++prefix;
-		prefix_str = FillTextWith(to_string(prefix), 4, '0');
+		prefix_str = FillTextWith(toStringRec(prefix), 4, '0');
 		file_name = dir + prefix_str + suffix;
 	}
 
@@ -260,7 +260,7 @@ void Explorer::Stash(Game& game)
 	file_name = dir + prefix_str + suffix;
 
 
-	file = ofstream();
+	file.flush();
 	file.open(file_name);
 
 	file << description;
@@ -392,7 +392,7 @@ string Explorer::ReadCharacterData(Game& game, vector<vector<Character> >::itera
 	string text = "";
 
 	// generation:character ... | ~passed_on
-	string gen_and_char = "  " + to_string(gen_id) + ":" + to_string(char_id);
+	string gen_and_char = "  " + toStringRec(gen_id) + ":" + toStringRec(char_id);
 
 
 	// (hp/hp_max mp/mp_max) ... | Character
@@ -453,7 +453,7 @@ string Explorer::ReadCharacterData(Game& game, vector<vector<Character> >::itera
 	text +=
 		"\n" + char_row + " | Character" +
 		"\n" + boss_row + " | Bosses" +
-		"\n  Complexity: " + to_string(int(round(battle_results[5]))) +
+		"\n  Complexity: " + toStringRec(int(round(battle_results[5]))) +
 		"\n  Move Sets:";
 
 	auto items = character->items();

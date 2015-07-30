@@ -529,7 +529,7 @@ void Character::PrintMoves()
 					}
 				} else if (pos == 2) {
 					++pos;
-					statement += to_string(*k) + "%";
+					statement += toStringRec<int>(*k) + "%";
 				} else if (pos == 3) {
 					pos = 0;
 					if ((k != j->end()) && (next(k) == j->end())) {   // if last
@@ -590,7 +590,7 @@ string Character::ReadStatement(vector<vector<int> > statement)
 				}
 			} else if (pos == 2) {
 				++pos;
-				statement_return += to_string(*k) + "%";
+				statement_return += toStringRec(*k) + "%";
 			} else if (pos == 3) {
 				pos = 0;
 				if ((k != j->end()) && (next(k) == j->end())) {   // if last

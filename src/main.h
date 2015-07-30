@@ -3,6 +3,8 @@
 
 //#define USING_COUT_
 
+#define NOMINMAX				// prevents windows from messing with max's
+#include "windows.h"
 #include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,6 +25,9 @@
 #include <map>
 #include <memory>
 
+#include "to_string_rec.h"
+#include "stoi.h"
+#include "make_unique_rec.h"
 #include "rand_range_int.h"
 #include "rand_from_percentages.h"
 #include "round_to_place.h"
@@ -31,10 +36,10 @@
 #include "get_average.h"
 
 #include "buff.h"
-#include "buffs\buffs.h"
+#include "buffs.h"
 
 #include "ability.h"
-#include "abilities\abilities.h"
+#include "abilities.h"
 
 #include "item.h"
 

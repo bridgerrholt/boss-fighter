@@ -1,7 +1,7 @@
 #ifndef ABILITIES_HEAL_H_
 #define ABILITIES_HEAL_H_
 
-#include "..\main.h"
+#include "main.h"
 
 class Character;
 

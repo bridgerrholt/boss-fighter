@@ -1,4 +1,4 @@
-#include "..\main.h"
+#include "main.h"
 
 GuardianHealer::GuardianHealer() : Ability()
 {

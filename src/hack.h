@@ -1,7 +1,7 @@
 #ifndef ABILITIES_HACK_H_
 #define ABILITIES_HACK_H_
 
-#include "..\main.h"
+#include "main.h"
 
 class Character;
 

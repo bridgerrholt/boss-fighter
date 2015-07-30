@@ -1,7 +1,7 @@
 #ifndef ABILITIES_BATTLE_CRY_H_
 #define ABILITIES_BATTLE_CRY_H_
 
-#include "..\main.h"
+#include "main.h"
 
 class Character;
 
