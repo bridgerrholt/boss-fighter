@@ -1,0 +1,49 @@
+#ifndef MAIN_H_
+#define MAIN_H_
+
+//#define USING_COUT_
+
+#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <stdexcept>
+#include <limits>
+#include <time.h>
+
+#include <math.h>
+#include <algorithm>
+#include <array>
+#include <vector>
+#include <deque>
+#include <tuple>
+#include <map>
+#include <memory>
+
+#include "rand_range_int.h"
+#include "rand_from_percentages.h"
+#include "round_to_place.h"
+#include "fill_text_with.h"
+#include "check_file_exists.h"
+#include "get_average.h"
+
+#include "buff.h"
+#include "buffs\buffs.h"
+
+#include "ability.h"
+#include "abilities\abilities.h"
+
+#include "item.h"
+
+#include "character.h"
+
+#include "explorer.h"
+#include "game.h"
+
+#include "fight.h"
+
+
+#endif
