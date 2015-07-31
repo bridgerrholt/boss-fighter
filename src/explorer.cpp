@@ -79,7 +79,7 @@ void Explorer::Explore(Game& game)
 
 			} else if (*i == "fight" || *i == "f") {
 				if (next(i) != input.end()) {
-					input_int = stoi(*next(i));
+					input_int = stoiRec(*next(i));
 				} else {
 					cout << "How many generations? ";
 
@@ -161,7 +161,7 @@ void Explorer::ListGenerations(Game &game, vector<string> input)
 
 			++i;
 			if (i != input.end()) {
-				generation = stoi(*i);
+				generation = stoiRec(*i);
 
 				if (generation >= 0 && generation < game.generations.size()) {
 					auto gen = game.generations.begin() + generation;
@@ -170,7 +170,7 @@ void Explorer::ListGenerations(Game &game, vector<string> input)
 
 					++i;
 					if (i != input.end()) {
-						character = stoi(*i);
+						character = stoiRec(*i);
 
 						if (character >= 0 && character < gen->size()) {
 							auto chr = gen->begin() + character;

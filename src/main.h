@@ -26,7 +26,7 @@
 #include <memory>
 
 #include "to_string_rec.h"
-#include "stoi.h"
+#include "stoi_rec.h"
 #include "make_unique_rec.h"
 #include "rand_range_int.h"
 #include "rand_from_percentages.h"
