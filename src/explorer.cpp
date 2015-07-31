@@ -98,6 +98,19 @@ void Explorer::Explore(Game& game)
 
 			} else if (*i == "generations" || *i == "g") {
 				ListGenerations(game, input);
+			} else if (*i == "debug" || *i == "db") {
+				if (next(i) != input.end()) {
+					++i;
+					if (*i == "printrand" || *i == "pr") {
+						if (next(i) != input.end() && next(next(i)) != input.end()) {
+							++i;
+
+							for (unsigned int j = 0; j < stoiRec(*i); ++j) {
+								cout << RandRangeInt(stoiRec(*next(i))) << endl;
+							}
+						}
+					}
+				}
 			}
 		}
 
