@@ -3,8 +3,8 @@
 
 //#define USING_COUT_
 
-#define NOMINMAX				// prevents windows from messing with max's
-#include "windows.h"
+//#define NOMINMAX				// prevents windows from messing with max's
+//#include "windows.h"
 #include <sys/stat.h>
 #include <stdio.h>
 #include <stdlib.h>
