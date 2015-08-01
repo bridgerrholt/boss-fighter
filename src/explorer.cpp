@@ -79,7 +79,8 @@ void Explorer::Explore(Game& game)
 
 			} else if (*i == "fight" || *i == "f") {
 				if (next(i) != input.end()) {
-					input_int = stoiRec(*next(i));
+					++i;
+					input_int = stoiRec(*i);
 				} else {
 					cout << "How many generations? ";
 
@@ -95,6 +96,16 @@ void Explorer::Explore(Game& game)
 				game.generation_amount = abs(input_int);
 
 				Fight(game, false);
+
+				if (next(i) != input.end()) {
+					++i;
+
+					if (*i == "s") {
+						cout << "Stashing...\n";
+						Stash(game);
+					}
+
+				}
 
 			} else if (*i == "generations" || *i == "g") {
 				ListGenerations(game, input);
@@ -230,7 +241,11 @@ void Explorer::Stash(Game& game)
 
 
 	ofstream file;
-	file.open(file_name);
+	file.open(file_name, fstream::out);
+
+	if (!file.is_open()) {
+		cout << "Failure opening: " << strerror(errno) << "\n";
+	}
 
 	file << description;
 	file << "These are all the individual characters.\n\n";
@@ -262,6 +277,12 @@ void Explorer::Stash(Game& game)
 		}
 
 		file << "-----------------\n\n";
+	}
+
+
+
+	if (file.bad()) {
+		cout << "Couldn't write\n";
 	}
 
 	file.close();
@@ -393,7 +414,7 @@ void Explorer::Stash(Game& game)
 
 	file.close();*/
 
-	cout << "Done\n\n";
+	cout << "Stashed\n\n";
 }
 
 string Explorer::ReadCharacterData(Game& game, vector<vector<Character> >::iterator generation, vector<Character>::iterator character)
@@ -623,7 +644,7 @@ void Explorer::Fight(Game& game, bool show_text)
 		++ii;
 	}
 
-	printf("\nDone\n\n");
+	printf("\nFighting finished\n\n");
 }
 
 bool Explorer::TieBreakers(vector<float> results_1, vector<float> results_2)
