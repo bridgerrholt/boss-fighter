@@ -102,7 +102,16 @@ void Explorer::Explore(Game& game)
 
 					if (*i == "s") {
 						cout << "Stashing...\n";
-						Stash(game);
+						int stash_id = 0;
+						if (next(i) == input.end()) {
+							stash_id = 0;
+						} else if (*next(i) == "all" || *next(i) == "a") {
+							stash_id = 1;
+						} else if (*next(i) == "best" || *next(i) == "b") {
+							stash_id = 2;
+						}
+
+						Stash(game, stash_id);
 					}
 
 				}
@@ -179,7 +188,16 @@ void Explorer::ListGenerations(Game &game, vector<string> input)
 				}
 			}
 		} else if (*i == "stash" || *i == "s") {
-			Stash(game);
+			int stash_id = 0;
+			if (next(i) == input.end()) {
+				stash_id = 0;
+			} else if (*next(i) == "all" || *next(i) == "a") {
+				stash_id = 1;
+			} else if (*next(i) == "best" || *next(i) == "b") {
+				stash_id = 2;
+			}
+
+			Stash(game, stash_id);
 		} else if (*i == "fight" || *i == "f") {
 			int generation;
 
@@ -213,7 +231,7 @@ void Explorer::ListGenerations(Game &game, vector<string> input)
 	}
 }
 
-void Explorer::Stash(Game& game)
+void Explorer::Stash(Game& game, int stash_id)
 {
 	string description = "";
 	description += "Seed:        " + toStringRec(game.seed) + "\n";
@@ -227,96 +245,137 @@ void Explorer::Stash(Game& game)
 	description += "Nothing in the battles are random, the only random factor is the mutations to each character (other than the first).\n";
 
 	string dir = "stash/";
-	string suffix = "-stash-all.txt";
+	string suffix_all = "-stash-all.txt";
+	string suffix_best = "-stash-best.txt";
 	int prefix = 0;
 	string prefix_str = FillTextWith(toStringRec(prefix), 4, '0');
-	string file_name = dir + prefix_str + suffix;
+	string file_name_all = dir + prefix_str + suffix_all;
+	string file_name_best = dir + prefix_str + suffix_best;
 
-	while (CheckFileExists(file_name)) {
+	while (CheckFileExists(file_name_all) || CheckFileExists(file_name_best)) {
 		++prefix;
 		prefix_str = FillTextWith(toStringRec(prefix), 4, '0');
-		file_name = dir + prefix_str + suffix;
+		file_name_all = dir + prefix_str + suffix_all;
+		file_name_best = dir + prefix_str + suffix_best;
 	}
-
-
 
 	ofstream file;
-	file.open(file_name, fstream::out);
 
-	if (!file.is_open()) {
-		cout << "Failure opening: " << strerror(errno) << "\n";
+	if (stash_id == 0 || stash_id == 1) {
+		file.open(file_name_all);
+
+		if (!file.is_open()) {
+			cout << "Failure opening " << file_name_all << ": " << strerror(errno) << "\n";
+		}
+
+		file << description;
+		file << "These are all the individual characters.\n\n";
+
+		for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
+			file << "Generation " << i - game.generations.begin() << "\n";
+			file << "-----------------\n";
+
+			for (auto j = i->begin(); j != i->end(); ++j) {
+
+				file << ReadCharacterData(game, i, j);
+
+				/*file << " Character " << i - game.generations.begin() << ":" << j - i->begin() << " (" <<
+					j->battle_results()[1] << "/" << j->health_max() << " HP, " <<
+					j->battle_results()[3] << "/" << j->magic_max() << " MP) | Boss (" <<
+					j->battle_results()[2] << "/" << game.boss.health_max() << " HP, " <<
+					j->battle_results()[4] << "/" << game.boss.magic_max() << " MP)\n";
+
+				file << "  Move sets:\n";
+				auto items = j->items();
+				for (auto k = items.begin(); k != items.end(); ++k) {
+					file << "   " << j->ReadStatement((*k).statement) << "\n";
+					for (auto a = k->moves.begin(); a != k->moves.end(); ++a) {
+						file << "    " << j->ReadAbility(game, *a) << "\n";
+					}
+				}
+
+				file << "\n";*/
+			}
+
+			file << "-----------------\n\n";
+		}
+
+
+
+		if (file.bad()) {
+			cout << "Couldn't write to" << file_name_all << "\n";
+		}
+
+		file.close();
+		file.flush();
 	}
 
-	file << description;
-	file << "These are all the individual characters.\n\n";
 
-	for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
-		file << "Generation " << i - game.generations.begin() << "\n";
-		file << "-----------------\n";
+	if (stash_id == 0 || stash_id == 2) {
+		file.open(file_name_best);
 
-		for (auto j = i->begin(); j != i->end(); ++j) {
+		if (!file.is_open()) {
+			cout << "Failure opening " << file_name_best << ": " << strerror(errno) << "\n";
+		}
 
+		file << description;
+
+		file << "These are the best characters in each generation.\n\n";
+		file << "-- PASSED ON (only the ones that were BETTER than the previous get passed on) --\n\n";
+
+		for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
+			auto j = i->begin() + *(game.generation_winners.begin() + (i - game.generations.begin()));
+			if (!(j->battle_results()[0] == 1 && i - game.generations.begin() != 0)) {
+				file << "Generation " << i - game.generations.begin() << "\n";
+				file << "-----------------\n";
+
+				file << ReadCharacterData(game, i, j);
+
+				/*file << " Complexity: " << j->battle_results()[5] << "\n";
+				file << " Character " << i - game.generations.begin() << ":" << j - i->begin() << " (" <<
+					j->battle_results()[1] << "/" << j->health_max() << " HP, " <<
+					j->battle_results()[3] << "/" << j->magic_max() << " MP) | Boss (" <<
+					j->battle_results()[2] << "/" << game.boss.health_max() << " HP, " <<
+					j->battle_results()[4] << "/" << game.boss.magic_max() << " MP)";
+
+
+				file << "\n";
+
+				file << "  Move sets:\n";
+				auto items = j->items();
+				for (auto k = items.begin(); k != items.end(); ++k) {
+					file << "   " << j->ReadStatement((*k).statement) << "\n";
+					for (auto a = k->moves.begin(); a != k->moves.end(); ++a) {
+						file << "     " << j->ReadAbility(game, *a) << "\n";
+					}
+				}
+
+				file << "\n";*/
+
+				file << "-----------------\n\n";
+			}
+		}
+
+		file << "----------------------------------------------------------------------------------\n";
+		file << "-- ALL --\n\n";
+
+		for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
+			file << "Generation " << i - game.generations.begin() << "\n";
+			file << "-----------------\n";
+
+
+			auto j = i->begin() + *(game.generation_winners.begin() + (i - game.generations.begin()));
 			file << ReadCharacterData(game, i, j);
+
 
 			/*file << " Character " << i - game.generations.begin() << ":" << j - i->begin() << " (" <<
 				j->battle_results()[1] << "/" << j->health_max() << " HP, " <<
 				j->battle_results()[3] << "/" << j->magic_max() << " MP) | Boss (" <<
 				j->battle_results()[2] << "/" << game.boss.health_max() << " HP, " <<
-				j->battle_results()[4] << "/" << game.boss.magic_max() << " MP)\n";
-
-			file << "  Move sets:\n";
-			auto items = j->items();
-			for (auto k = items.begin(); k != items.end(); ++k) {
-				file << "   " << j->ReadStatement((*k).statement) << "\n";
-				for (auto a = k->moves.begin(); a != k->moves.end(); ++a) {
-					file << "    " << j->ReadAbility(game, *a) << "\n";
-				}
-			}
-
-			file << "\n";*/
-		}
-
-		file << "-----------------\n\n";
-	}
-
-
-
-	if (file.bad()) {
-		cout << "Couldn't write\n";
-	}
-
-	file.close();
-
-
-
-	dir = "stash/";
-	suffix = "-stash-best.txt";
-	file_name = dir + prefix_str + suffix;
-
-
-	file.flush();
-	file.open(file_name);
-
-	file << description;
-
-	file << "These are the best characters in each generation.\n\n";
-	file << "-- PASSED ON (only the ones that were BETTER than the previous get passed on) --\n\n";
-
-	for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
-		auto j = i->begin() + *(game.generation_winners.begin() + (i - game.generations.begin()));
-		if (!(j->battle_results()[0] == 1 && i - game.generations.begin() != 0)) {
-			file << "Generation " << i - game.generations.begin() << "\n";
-			file << "-----------------\n";
-
-			file << ReadCharacterData(game, i, j);
-
-			/*file << " Complexity: " << j->battle_results()[5] << "\n";
-			file << " Character " << i - game.generations.begin() << ":" << j - i->begin() << " (" <<
-				j->battle_results()[1] << "/" << j->health_max() << " HP, " <<
-				j->battle_results()[3] << "/" << j->magic_max() << " MP) | Boss (" <<
-				j->battle_results()[2] << "/" << game.boss.health_max() << " HP, " <<
 				j->battle_results()[4] << "/" << game.boss.magic_max() << " MP)";
 
+			if (j->battle_results()[0] == 1 && i - game.generations.begin() != 0)
+				file << " NOT PASSED ON";
 
 			file << "\n";
 
@@ -333,46 +392,15 @@ void Explorer::Stash(Game& game)
 
 			file << "-----------------\n\n";
 		}
-	}
-
-	file << "----------------------------------------------------------------------------------\n";
-	file << "-- ALL --\n\n";
-
-	for (auto i = game.generations.begin(); i != game.generations.end(); ++i) {
-		file << "Generation " << i - game.generations.begin() << "\n";
-		file << "-----------------\n";
 
 
-		auto j = i->begin() + *(game.generation_winners.begin() + (i - game.generations.begin()));
-		file << ReadCharacterData(game, i, j);
-
-
-		/*file << " Character " << i - game.generations.begin() << ":" << j - i->begin() << " (" <<
-			j->battle_results()[1] << "/" << j->health_max() << " HP, " <<
-			j->battle_results()[3] << "/" << j->magic_max() << " MP) | Boss (" <<
-			j->battle_results()[2] << "/" << game.boss.health_max() << " HP, " <<
-			j->battle_results()[4] << "/" << game.boss.magic_max() << " MP)";
-
-		if (j->battle_results()[0] == 1 && i - game.generations.begin() != 0)
-			file << " NOT PASSED ON";
-
-		file << "\n";
-
-		file << "  Move sets:\n";
-		auto items = j->items();
-		for (auto k = items.begin(); k != items.end(); ++k) {
-			file << "   " << j->ReadStatement((*k).statement) << "\n";
-			for (auto a = k->moves.begin(); a != k->moves.end(); ++a) {
-				file << "     " << j->ReadAbility(game, *a) << "\n";
-			}
+		if (file.bad()) {
+			cout << "Couldn't write to" << file_name_best << "\n";
 		}
 
-		file << "\n";*/
-
-		file << "-----------------\n\n";
+		file.close();
+		file.flush();
 	}
-
-	file.close();
 
 	/*ofstream file;
 	file.open("stash.xml");

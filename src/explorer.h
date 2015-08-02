@@ -17,7 +17,7 @@ class Explorer
 		void Explore(Game& game);													// takes input
 		void ListCommands();														// prints all the commands
 		void ListGenerations(Game& game, vector<string> input);						// prints all the commands
-		void Stash(Game& game);
+		void Stash(Game& game, int stash_id);
 		string ReadCharacterData(Game& game, vector<vector<Character> >::iterator generation, vector<Character>::iterator character);
 		bool TieBreakers(vector<float> results_1, vector<float> results_2);
 
