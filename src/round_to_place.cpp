@@ -16,7 +16,7 @@ string RoundToPlace(float value, int place)
 	}
 
 	value = round(value*pow(10, place));
-	string text = toStringRec(int(value));
+	string text = Standard::to_string(int(value));
 
 	if (place > 0) {
 		text.insert(text.length() - place, ".");

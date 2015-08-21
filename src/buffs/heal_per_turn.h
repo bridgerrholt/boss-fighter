@@ -1,7 +1,7 @@
 #ifndef BUFFS_HEAL_PER_TURN_H_
 #define BUFFS_HEAL_PER_TURN_H_
 
-#include "main.h"
+#include "../main.h"
 
 class Character;
 

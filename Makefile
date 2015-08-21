@@ -1,6 +1,6 @@
 program_NAME := bossfighter
-program_C_SRCS := $(wildcard src/*.c)
-program_CXX_SRCS := $(wildcard src/*.cpp)
+program_C_SRCS := $(wildcard src/*.c src/*/*.c)
+program_CXX_SRCS := $(wildcard src/*.cpp src/*/*.cpp)
 program_C_OBJS := ${program_C_SRCS:.c=.o}
 program_CXX_OBJS := ${program_CXX_SRCS:.cpp=.o}
 program_OBJS := $(program_C_OBJS) $(program_CXX_OBJS)

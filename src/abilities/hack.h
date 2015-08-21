@@ -1,16 +1,16 @@
-#ifndef ABILITIES_HEAL_H_
-#define ABILITIES_HEAL_H_
+#ifndef ABILITIES_HACK_H_
+#define ABILITIES_HACK_H_
 
-#include "main.h"
+#include "../main.h"
 
 class Character;
 
 using namespace std;
 
-class Heal: public Ability
+class Hack: public Ability
 {
 	public:
-		Heal();
+		Hack();
 
 		bool Use(Character& self, Character& enemy, int& cost);
 };

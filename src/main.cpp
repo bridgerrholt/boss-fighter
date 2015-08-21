@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	/*string input;
 	cout << "How many generations? ";
 	cin >> input;
-	//game.generation_amount = abs(stoiRec(input));
+	//game.generation_amount = abs(Standard::stoi(input));
 	game.generation_amount = 5;
 	cout << endl;
 	cin.get();*/

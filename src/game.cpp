@@ -6,15 +6,15 @@ Game::Game()
 {
 	explorer = Explorer();
 
-	abilities.push_back(makeUniqueRec<BattleCry>());
+	abilities.push_back(Standard::make_unique<BattleCry>());
 	abilities_map["BattleCry"] = abilities.size() - 1;
-	abilities.push_back(makeUniqueRec<Heal>());
+	abilities.push_back(Standard::make_unique<Heal>());
 	abilities_map["Heal"] = abilities.size() - 1;
-	abilities.push_back(makeUniqueRec<Hack>());
+	abilities.push_back(Standard::make_unique<Hack>());
 	abilities_map["Hack"] = abilities.size() - 1;
-	abilities.push_back(makeUniqueRec<GuardianHealer>());
+	abilities.push_back(Standard::make_unique<GuardianHealer>());
 	abilities_map["Guardian Healer"] = abilities.size() - 1;
-	/*abilities.push_back(makeUniqueRec<GuardianHealer>());
+	/*abilities.push_back(Standard::make_unique<GuardianHealer>());
 	abilities_map["GuardianHealer"] = abilities.size() - 1;*/
 	boss_average_health_max = 0.0f;
 	boss_average_magic_max = 0.0f;

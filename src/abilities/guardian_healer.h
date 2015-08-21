@@ -1,7 +1,7 @@
 #ifndef ABILITIES_GUARDIAN_HEALER_H_
 #define ABILITIES_GUARDIAN_HEALER_H_
 
-#include "main.h"
+#include "../main.h"
 
 class Character;
 

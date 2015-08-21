@@ -26,9 +26,8 @@
 #include <map>
 #include <memory>
 
-#include "to_string_rec.h"
-#include "stoi_rec.h"
-#include "make_unique_rec.h"
+#include "standard/standard.h"
+
 #include "rand_range_int.h"
 #include "rand_from_percentages.h"
 #include "round_to_place.h"
@@ -37,10 +36,10 @@
 #include "get_average.h"
 
 #include "buff.h"
-#include "buffs.h"
+#include "buffs/buffs.h"
 
 #include "ability.h"
-#include "abilities.h"
+#include "abilities/abilities.h"
 
 #include "item.h"
 
